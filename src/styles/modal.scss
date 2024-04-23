@@ -1,0 +1,41 @@
+.modal {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(0,0,0,0.075);
+}
+
+.container-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    top: 200px;
+    left: 90px;
+    border-radius: 20px;
+    button {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 1.8rem;
+    }
+    h1 {
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: #acd9b2;
+        text-align: center;
+    }
+}
+
+
+@media(min-width: 800px) {
+    .container-modal {
+        left: 350px;
+    }
+}

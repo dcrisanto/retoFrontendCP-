@@ -1,0 +1,135 @@
+@import "vars";
+
+.pay-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    font-size: var(--lg);
+    padding-bottom: 20px;
+  }
+}
+
+.pay-section .container-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.pay-section .container-form .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pay-section .container-form .form .label {
+  display: flex;
+  flex-direction: column;
+}
+
+.pay-section .container-form .form .label span {
+  margin-bottom: 4px;
+  color: var(--black);
+  font-size: var(--sm);
+  font-weight: bold;
+  line-height: var(--lg);
+}
+
+.pay-section .container-form .form .input {
+  height: 40px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: var(--md);
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--text-input-field);
+  background-color: var(--background-input-field);
+}
+
+.pay-section .container-form .form input::placeholder {
+  color: var(--text-input-field);
+}
+
+.pay-section .container-form .form .label .input-email {
+  margin-bottom: 22px;
+}
+
+.pay-section .container-form .form .container-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pay-section .container-form .form .container-button .primary-button {
+  width: 100%;
+  min-width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-size: var(--md);
+  font-weight: bold;
+  line-height: 2.2rem;
+  color: var(--white);
+  background-color: var(--hospital-green);
+  cursor: pointer;
+}
+
+.pay-section .container-form .form .container-button .login-button {
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+
+.pay-section .container-form .form .container-button a {
+  font-size: var(--sm);
+  font-weight: 500;
+  line-height: var(--lg);
+  text-align: center;
+  text-decoration: none;
+  color: var(--hospital-green);
+}
+
+.pay-section .container-secondary-button {
+  display: flex;
+  justify-content: center;
+}
+
+.pay-section .container-secondary-button .secondary-button {
+  width: 100%;
+  min-width: 300px;
+  height: 50px;
+  border: 1px solid var(--hospital-green);
+  border-radius: 8px;
+  font-size: var(--md);
+  font-weight: bold;
+  line-height: 2.2rem;
+  color: var(--hospital-green);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.pay-section .container-secondary-button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 40vh;
+}
+
+@media (min-width: 800px) {
+  .pay-section .container-logo {
+    display: none;
+  }
+
+  .pay-section {
+    height: 80vh;
+  }
+
+  .pay-section .container-secondary-button {
+    display: flex;
+    justify-content: center;
+    height: 52px;
+    margin-top: 52px;
+  }
+}

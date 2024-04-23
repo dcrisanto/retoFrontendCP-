@@ -1,0 +1,98 @@
+@import "vars";
+
+.my-order-section, .no-order-section {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    z-index: 1;
+}
+
+ .my-order-aside .my-order-section .title, .total {
+        margin-bottom: 20px;
+}
+
+.my-order-section .total {
+    width: 90%;
+    height: 76px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background-input-field);
+}
+
+.my-order-section .total p {
+    font-size: var(--md);
+    font-weight: bold;
+    line-height: var(--lg);
+}
+
+.my-order-section .container-btn {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.my-order-section .container-btn button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--lg);
+    font-weight: bold;
+    line-height: 2.2rem;
+    color: var(--white);
+    background-color: var(--hospital-green);
+}
+
+.my-order-section .title {
+    display: none
+}
+
+@media (min-width: 450px){
+
+   .my-order-section .total {
+    width: 380px;
+    }
+
+    .my-order-section .container-btn {
+        width: 380px;
+    }
+
+}
+
+@media(min-width: 800px) {
+
+    .my-order-aside {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .my-order-aside .my-order-section {
+        width: auto;
+        align-items: flex-start;
+        top: 52px;
+        border: 2px solid var(--very-light-pink);
+    }
+
+    .my-order-aside .my-order-section .title {
+        display: flex;
+    }
+
+    .my-order-aside .my-order-section .title img {
+        padding-right: 24px;
+    }
+
+    .my-order-aside .my-order-section .title h1 {
+        font-size: var(--lg);
+        font-weight: bold;
+        line-height: 2.2rem;
+        color: var(--black);
+    }
+}
