@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useContext } from "react";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import ModalLogin from "../../modals/ModalLogin";
+import { GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
   const context = useContext(ShoppingCartContext);
@@ -41,6 +42,13 @@ const Login = () => {
       alert("Ingresa datos");
     }
   };
+
+  const handleSuccess = (response) => {
+    console.log(response);
+  };
+  const handleError = (error) => {
+    console.log(error);
+  };
   return (
     <>
       <section className="login-section">
@@ -73,6 +81,9 @@ const Login = () => {
               </button>
             </div>
           </form>
+        </div>
+        <div className="m-7">
+          <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
         </div>
         <button onClick={() => handleClick()} className="guest-btn btn-primary">
           Invitado
